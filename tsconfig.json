@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "noEmit": true,
+    "moduleResolution": "nodenext",
+    "strict": true,
+    "strictNullChecks": true,
+    "target": "ESNext",
+    "types": [
+      "vite/client"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

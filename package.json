@@ -1,0 +1,65 @@
+{
+  "name": "@edielemoine/slidev-theme",
+  "version": "0.0.1",
+  "description": "Slidev theme",
+  "keywords": [
+    "slidev-theme",
+    "slidev"
+  ],
+  "repository": "github:edielemoine/slidev-theme",
+  "license": "MIT",
+  "author": "Edie Lemoine <edie@myparcel.nl>",
+  "scripts": {
+    "build": "slidev build example.md",
+    "dev": "slidev example.md",
+    "export": "slidev export example.md",
+    "screenshot": "slidev export example.md --format png",
+    "prepare": "is-ci || husky install"
+  },
+  "dependencies": {
+    "@slidev/types": "^0.22.7",
+    "codemirror-theme-vars": "^0.1.1",
+    "prism-theme-vars": "^0.2.2",
+    "theme-vitesse": "^0.1.12"
+  },
+  "devDependencies": {
+    "@myparcel-eslint/eslint-config-esnext": "^1.2.3",
+    "@myparcel-eslint/eslint-config-import": "^1.0.0",
+    "@myparcel-eslint/eslint-config-node": "^1.2.3",
+    "@myparcel-eslint/eslint-config-prettier": "^1.2.3",
+    "@myparcel-eslint/eslint-config-prettier-typescript": "^1.2.6",
+    "@myparcel-eslint/eslint-config-prettier-typescript-vue": "^1.2.8",
+    "@slidev/cli": "^0.42.5",
+    "@types/node": "^20",
+    "eslint": "^8.43.0",
+    "husky": "^8.0.3",
+    "is-ci": "^3.0.1",
+    "lint-staged": "^13.2.3",
+    "playwright-chromium": "^1.35.1",
+    "prettier": "^2.8.8",
+    "sass": "^1.63.6",
+    "typescript": "^5.1.6",
+    "vite": "^4.3.9",
+    "vue": "^3.3.4"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "slidev": ">=0.19.3"
+  },
+  "slidev": {
+    "colorSchema": "both",
+    "defaults": {
+      "fonts": {
+        "sans": "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
+        "serif": "Poppins",
+        "local": "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji"
+      }
+    },
+    "highlighter": "shiki"
+  },
+  "prettier": "@myparcel/prettier-config",
+  "packageManager": "yarn@3.6.0",
+  "volta": {
+    "node": "20.3.1"
+  }
+}

@@ -1,0 +1,24 @@
+.slidev-layout {
+  @apply bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-slate-50 flex px-14 pt-10 flex-col bg-cover bg-center bg-no-repeat relative pb-1 overflow-hidden;
+
+  @apply after:content-[''] after:absolute after:inset-x-0 after:bottom-0 after:h-2 after:bg-red-500 dark:after:bg-red-900;
+
+  &.intro {
+    @apply bg-gradient-to-br from-rose-400 to-orange-400 dark:from-rose-900 dark:to-orange-800;
+
+    h1 {
+      @apply text-7xl;
+    }
+
+    h2 {
+      @apply text-5xl;
+    }
+  }
+
+  &.bullets {
+    ol,
+    ul {
+      @apply text-2xl leading-10;
+    }
+  }
+}

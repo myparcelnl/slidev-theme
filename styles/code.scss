@@ -1,0 +1,11 @@
+code {
+  @apply text-xs leading-normal;
+}
+
+pre {
+  @apply shadow leading-normal;
+}
+
+:not(pre) > code {
+  @apply bg-orange-100 dark:bg-orange-800 rounded-sm px-1 py-0.5 shadow;
+}
