@@ -1,0 +1,7 @@
+.slidev-vclick-target {
+  @apply opacity-100 duration-300 ease-in-out #{!important};
+}
+
+.slidev-vclick-hidden {
+  @apply pointer-events-none opacity-0 #{!important};
+}

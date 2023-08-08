@@ -1,9 +1,9 @@
 <template>
-  <div class="slidev-layout flex">
+  <div class="flex slidev-layout">
     <div class="flex-1 m-auto">
-      <slot/>
+      <slot />
     </div>
   </div>
 </template>
 
-<script lang="ts" setup/>
+<script lang="ts" setup />

@@ -1,0 +1,29 @@
+name: 'Release 🚀'
+
+on:
+  workflow_dispatch:
+
+#  push:
+#    branches:
+#       - main
+
+jobs:
+  release:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: myparcelnl/actions/yarn-install@v3
+        with:
+          node-version: 18
+
+      - name: 'Verify the integrity of provenance attestations and registry signatures for installed dependencies'
+        run: npm audit signatures
+
+      - name: 'Release'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release

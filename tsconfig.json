@@ -1,17 +1,16 @@
 {
   "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "alwaysStrict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-    "noEmit": true,
     "moduleResolution": "nodenext",
+    "noEmit": true,
     "strict": true,
     "strictNullChecks": true,
     "target": "ESNext",
-    "types": [
-      "vite/client"
-    ]
+    "types": ["vite/client"]
   },
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["./**/*"],
+  "exclude": ["node_modules"]
 }

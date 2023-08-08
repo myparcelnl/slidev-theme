@@ -1,11 +1,15 @@
+:root {
+  --slidev-code-radius: 0.5rem !important;
+}
+
 code {
   @apply text-xs leading-normal;
 }
 
 pre {
-  @apply shadow leading-normal;
+  @apply shadow;
 }
 
 :not(pre) > code {
-  @apply bg-orange-100 dark:bg-orange-800 rounded-sm px-1 py-0.5 shadow;
+  @apply bg-orange-100 dark:bg-orange-800 px-1 py-0.5 shadow;
 }
