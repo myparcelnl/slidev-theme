@@ -1,0 +1,57 @@
+* {
+  @apply border-gray-300 dark:border-gray-700;
+}
+
+h1 {
+  @apply text-gray-900 dark:text-gray-50;
+}
+
+h2 {
+  @apply text-gray-800 dark:text-gray-100;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-gray-700 dark:text-gray-200;
+}
+
+a {
+  @apply text-goldfish;
+}
+
+blockquote {
+  @apply border-gray-200 dark:border-gray-800;
+}
+
+:not(pre) > code {
+  @apply bg-orange-100 dark:bg-orange-800;
+}
+
+.slidev-layout {
+  @apply bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-50;
+
+  blockquote {
+    @apply dark:border-gray-200 border-gray-800;
+  }
+
+  &.intro,
+  &.outro {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    code {
+      @apply text-gray-200 dark:text-gray-700;
+    }
+
+    :not(pre) > code {
+      @apply bg-orange-800 dark:bg-orange-100;
+    }
+  }
+}

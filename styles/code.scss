@@ -11,5 +11,5 @@ pre {
 }
 
 :not(pre) > code {
-  @apply bg-orange-100 dark:bg-orange-800 px-1 py-0.5 shadow;
+  @apply px-1 py-0.5 shadow;
 }

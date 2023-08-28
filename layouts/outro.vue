@@ -2,9 +2,7 @@
   <div
     :style="style"
     class="outro slidev-layout">
-    <div class="my-auto">
-      <slot />
-    </div>
+    <slot />
 
     <div
       v-if="$slots.footer"
@@ -21,7 +19,7 @@ import {handleBackground} from '../utils/handleBackground.ts';
 const props = defineProps({
   background: {
     type: String,
-    default: '/img/slide-bg.jpeg',
+    default: '/public/slide-bg.jpeg',
   },
 });
 

@@ -35,7 +35,7 @@ import {handleBackground} from '../utils/handleBackground.ts';
 const props = defineProps({
   background: {
     type: String,
-    default: '/img/slide-bg.jpeg',
+    default: '/public/slide-bg.jpeg',
   },
 
   image: {

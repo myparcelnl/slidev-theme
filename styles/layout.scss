@@ -1,9 +1,5 @@
-* {
-  @apply border-gray-300 dark:border-gray-700;
-}
-
 .slidev-layout {
-  @apply h-full bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-50 flex px-12 pt-8 flex-col bg-cover bg-center bg-no-repeat relative pb-1 overflow-hidden;
+  @apply h-full flex px-12 pt-8 flex-col bg-cover bg-center bg-no-repeat relative pb-1 overflow-hidden;
 
   &.intro {
     h1 {
