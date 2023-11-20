@@ -3,9 +3,9 @@ name: 'Release 🚀'
 on:
   workflow_dispatch:
 
-#  push:
-#    branches:
-#       - main
+  push:
+    branches:
+      - main
 
 jobs:
   release:
@@ -13,17 +13,26 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
+          persist-credentials: false
+
+      - uses: myparcelnl/actions/setup-app-credentials@v3
+        id: credentials
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
+      - uses: actions/checkout@v3
+        with:
           fetch-depth: 0
+          persist-credentials: false
+          token: ${{ steps.credentials.outputs.token }}
 
       - uses: myparcelnl/actions/yarn-install@v3
         with:
-          node-version: 18
+          node-version: 20
 
-      - name: 'Verify the integrity of provenance attestations and registry signatures for installed dependencies'
-        run: npm audit signatures
-
-      - name: 'Release'
+      - uses: myparcelnl/actions/semantic-release@v3
+        with:
+          token: ${{ steps.credentials.outputs.token }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release

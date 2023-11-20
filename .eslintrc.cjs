@@ -21,5 +21,11 @@ module.exports = {
         '@myparcel-eslint/eslint-config-import',
       ],
     },
+    {
+      files: ['*.js', '*.mjs'],
+      parserOptions: {
+        sourceType: 'module',
+      },
+    },
   ],
 };
